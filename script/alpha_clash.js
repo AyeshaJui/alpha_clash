@@ -10,21 +10,20 @@
 
 //   playGroundSection.classList.remove("hidden");
 
-
 // }
 
-function continueGame(){
-const alphabet = getARandomAlphabet();
+function continueGame() {
+  const alphabet = getARandomAlphabet();
+  console.log("Your random alphabet", alphabet);
 
+  // set randomly generated alphabet to the screen (show it)
+  const currentAlphabetElement = document.getElementById("current-alphabet");
+  currentAlphabetElement.innerText = alphabet;
+  addBackgroundColorById(alphabet);
 }
 
-function play(){
-    hideElementByID('home-screen');
-    showElementByID('play-ground')
-    continueGame()
-
+function play() {
+  hideElementByID("home-screen");
+  showElementByID("play-ground");
+  continueGame();
 }
-
-
-
-
